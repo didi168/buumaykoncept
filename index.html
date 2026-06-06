@@ -3,7 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buumaykoncept – Design & Construction</title>
+
+  <!-- Primary SEO -->
+  <title>Buumaykoncept – Construction, Engineering, Interior Decor & Agricultural Services Nigeria</title>
+  <meta name="description" content="Buumaykoncept is Nigeria's premier multi-discipline firm delivering construction, engineering, interior decor, agricultural services, and logistics solutions across Nigeria and beyond." />
+  <meta name="keywords" content="construction Nigeria, engineering services Nigeria, interior decor Lagos, agricultural services Nigeria, logistics Nigeria, Buumaykoncept, building construction, project management" />
+  <meta name="author" content="Buumaykoncept" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://buumaykoncept.com/" />
+
+  <!-- Theme color (browser tab / mobile address bar) -->
+  <meta name="theme-color" content="#E8870A" />
+  <meta name="msapplication-TileColor" content="#E8870A" />
+  <meta name="msapplication-navbutton-color" content="#E8870A" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://buumaykoncept.com/" />
+  <meta property="og:title" content="Buumaykoncept – Build. Grow. Deliver." />
+  <meta property="og:description" content="Nigeria's premier multi-discipline firm delivering construction, engineering, interior decor, agricultural services, and logistics solutions." />
+  <meta property="og:image" content="https://buumaykoncept.com/logo.png" />
+  <meta property="og:site_name" content="Buumaykoncept" />
+  <meta property="og:locale" content="en_NG" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Buumaykoncept – Build. Grow. Deliver." />
+  <meta name="twitter:description" content="Nigeria's premier multi-discipline firm delivering construction, engineering, interior decor, agricultural services, and logistics solutions." />
+  <meta name="twitter:image" content="https://buumaykoncept.com/logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="shortcut icon" href="favicon.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -74,7 +109,26 @@
       transition: background var(--transition);
     }
     nav.scrolled { background: rgba(5,5,5,0.97); }
-    .nav-logo img { height: 42px; object-fit: contain; }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.6rem;
+      text-decoration: none; line-height: 1;
+    }
+    .nav-logo-icon {
+      width: 38px; height: 38px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .nav-logo-icon img { width: 38px; height: 38px; object-fit: contain; display: block; }
+    .nav-logo-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 0.01em;
+      color: var(--text-primary);
+      line-height: 1;
+      display: flex; align-items: center;
+    }
+    .nav-logo-name span { color: var(--brand-orange); }
     .nav-links { display: flex; gap: 2.2rem; list-style: none; }
     .nav-links a {
       font-family: 'Space Grotesk', sans-serif;
@@ -685,7 +739,25 @@
       gap: 3rem;
       margin-bottom: 3rem;
     }
-    .footer-brand img { height: 38px; margin-bottom: 1rem; }
+    .footer-brand-logo {
+      display: flex; align-items: center; gap: 0.6rem;
+      text-decoration: none; line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .footer-brand-icon {
+      width: 38px; height: 38px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .footer-brand-icon img { width: 38px; height: 38px; object-fit: contain; display: block; }
+    .footer-brand-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700; font-size: 1.25rem;
+      letter-spacing: 0.01em;
+      color: var(--text-primary); line-height: 1;
+      display: flex; align-items: center;
+    }
+    .footer-brand-name span { color: var(--brand-orange); }
     .footer-brand p { font-size: 0.87rem; color: var(--text-muted); line-height: 1.7; max-width: 260px; }
     .footer-col-title {
       font-family: 'Space Grotesk', sans-serif;
@@ -819,7 +891,10 @@
 
   <!-- NAVBAR -->
   <nav id="navbar">
-    <a href="#home" class="nav-logo"><img src="logo.png" alt="Buumaykoncept" /></a>
+    <a href="#home" class="nav-logo">
+      <div class="nav-logo-icon"><img src="favicon.png" alt="Buumaykoncept" /></div>
+      <span class="nav-logo-name">Buumay<span>koncept</span></span>
+    </a>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
@@ -828,8 +903,8 @@
       <li><a href="#process">Process</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button type="button" class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
+    <button type="button" class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -848,12 +923,12 @@
   <section id="home">
     <canvas id="particle-canvas"></canvas>
     <div class="hero-left">
-      <p class="hero-eyebrow reveal">Nigeria's Premier Design &amp; Build Studio</p>
+      <p class="hero-eyebrow reveal">Construction · Engineering · Agriculture · Logistics</p>
       <h1 class="hero-headline reveal reveal-delay-1">
-        We Build<br /><span>Dreams</span><br />Into Reality
+        We Build,<br /><span>Grow</span><br />&amp; Deliver.
       </h1>
       <p class="hero-sub reveal reveal-delay-2">
-        From civil engineering to luxury interior decor — Buumaykoncept delivers world-class construction and design solutions across Nigeria and beyond.
+        From construction and engineering to interior decor, agricultural development, and logistics — Buumaykoncept delivers end-to-end solutions across Nigeria and beyond.
       </p>
       <div class="hero-actions reveal reveal-delay-3">
         <a href="#projects" class="btn-primary">View Our Work</a>
@@ -888,7 +963,7 @@
         <div class="mosaic-overlay"></div>
       </div>
       <div class="mosaic-cell">
-        <img class="mosaic-img" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="Architecture" loading="eager" />
+        <img class="mosaic-img" src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=600&q=80" alt="Agricultural development" loading="eager" />
         <div class="mosaic-overlay"></div>
       </div>
     </div>
@@ -897,18 +972,18 @@
   <!-- MARQUEE DIVIDER -->
   <div class="marquee-section">
     <div class="marquee-track">
-      <span>Civil Engineering</span><span class="dot">✦</span>
+      <span>Construction</span><span class="dot">✦</span>
       <span>Interior Decor</span><span class="dot">✦</span>
-      <span>Building Furnishing</span><span class="dot">✦</span>
+      <span>Engineering</span><span class="dot">✦</span>
+      <span>Agricultural Services</span><span class="dot">✦</span>
       <span>Logistics</span><span class="dot">✦</span>
       <span>Project Management</span><span class="dot">✦</span>
-      <span>Architectural Design</span><span class="dot">✦</span>
-      <span>Civil Engineering</span><span class="dot">✦</span>
+      <span>Construction</span><span class="dot">✦</span>
       <span>Interior Decor</span><span class="dot">✦</span>
-      <span>Building Furnishing</span><span class="dot">✦</span>
+      <span>Engineering</span><span class="dot">✦</span>
+      <span>Agricultural Services</span><span class="dot">✦</span>
       <span>Logistics</span><span class="dot">✦</span>
       <span>Project Management</span><span class="dot">✦</span>
-      <span>Architectural Design</span><span class="dot">✦</span>
     </div>
   </div>
 
@@ -916,31 +991,37 @@
   <section id="services">
     <p class="section-label reveal">What We Do</p>
     <h2 class="section-title reveal reveal-delay-1">Our <span>Services</span></h2>
-    <p class="section-sub reveal reveal-delay-2">End-to-end solutions from foundation to finishing — we handle every phase of your project with precision and care.</p>
+    <p class="section-sub reveal reveal-delay-2">From construction and engineering to interior design, agricultural development, and logistics — five integrated service lines delivered with precision.</p>
     <div class="services-grid">
       <div class="service-card reveal">
         <span class="service-num">01</span>
         <span class="service-icon">🏗️</span>
-        <div class="service-name">Civil Engineering</div>
-        <p class="service-desc">Structural design, site development, and construction management for residential, commercial, and industrial projects.</p>
+        <div class="service-name">Construction</div>
+        <p class="service-desc">Residential, commercial, and industrial builds from ground-breaking to final handover — quality-driven construction management at every phase.</p>
       </div>
       <div class="service-card reveal reveal-delay-1">
         <span class="service-num">02</span>
         <span class="service-icon">🛋️</span>
         <div class="service-name">Interior Decor</div>
-        <p class="service-desc">Transforming spaces with bespoke interior design — from concept boards to full installation of luxury finishes.</p>
+        <p class="service-desc">Transforming spaces with bespoke interior design — from concept boards to full installation of premium finishes and furnishings.</p>
       </div>
       <div class="service-card reveal reveal-delay-2">
         <span class="service-num">03</span>
-        <span class="service-icon">🪑</span>
-        <div class="service-name">Building Furnishing</div>
-        <p class="service-desc">Custom furniture sourcing, procurement, and installation tailored to your space, style, and budget.</p>
+        <span class="service-icon">⚙️</span>
+        <div class="service-name">Engineering</div>
+        <p class="service-desc">Structural, civil, and mechanical engineering solutions — from detailed design and analysis to on-site technical supervision and project delivery.</p>
       </div>
       <div class="service-card reveal reveal-delay-3">
         <span class="service-num">04</span>
+        <span class="service-icon">🌾</span>
+        <div class="service-name">Agricultural Services</div>
+        <p class="service-desc">Farm development, agribusiness infrastructure, irrigation systems, and agricultural facility construction for smallholders and large-scale operators alike.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-4">
+        <span class="service-num">05</span>
         <span class="service-icon">🚚</span>
         <div class="service-name">Logistics</div>
-        <p class="service-desc">Reliable supply chain and materials logistics ensuring your project stays on schedule and within budget.</p>
+        <p class="service-desc">End-to-end supply chain and materials logistics — reliable procurement, transport, and delivery to keep every project on schedule and within budget.</p>
       </div>
     </div>
   </section>
@@ -957,16 +1038,16 @@
       </div>
       <div class="about-text">
         <p class="section-label reveal">Who We Are</p>
-        <h2 class="section-title reveal reveal-delay-1">Building <span>Nigeria's</span> Future</h2>
+        <h2 class="section-title reveal reveal-delay-1">Five Services.<br /><span>One Company.</span></h2>
         <p class="section-sub reveal reveal-delay-2">
-          Buumaykoncept is a full-service design and construction company rooted in Nigeria, with a passion for transforming spaces and building lasting structures. We combine local expertise with global standards.
+          Buumaykoncept is a multi-sector services company rooted in Nigeria. We build structures, engineer solutions, design interiors, develop agricultural infrastructure, and move goods — bringing the same standard of precision and care to every discipline.
         </p>
         <ul class="about-list reveal reveal-delay-3">
-          <li>ISO-aligned construction practices</li>
-          <li>In-house design and engineering teams</li>
-          <li>Transparent project timelines and budgets</li>
-          <li>Post-project support and maintenance</li>
-          <li>Sustainable building materials sourcing</li>
+          <li>Construction &amp; civil engineering across Nigeria</li>
+          <li>Interior decor and premium space finishing</li>
+          <li>Structural, mechanical &amp; civil engineering consultancy</li>
+          <li>Agricultural facility development &amp; farm infrastructure</li>
+          <li>Logistics, procurement, and supply chain management</li>
         </ul>
         <a href="#contact" class="btn-primary reveal reveal-delay-4">Work With Us</a>
       </div>
@@ -977,12 +1058,12 @@
   <section id="projects">
     <p class="section-label reveal">Our Work</p>
     <h2 class="section-title reveal reveal-delay-1">Featured <span>Projects</span></h2>
-    <p class="section-sub reveal reveal-delay-2">A selection of our most impactful builds, interiors, and furnishing projects across Nigeria.</p>
+    <p class="section-sub reveal reveal-delay-2">A selection of our most impactful builds, engineering contracts, interior projects, and agricultural developments across Nigeria.</p>
     <div class="portfolio-grid">
       <div class="portfolio-card reveal">
         <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Residential Complex" loading="lazy" />
         <div class="portfolio-overlay">
-          <div class="portfolio-tag">Civil Engineering</div>
+          <div class="portfolio-tag">Construction</div>
           <div class="portfolio-title">Lekki Residential Complex</div>
         </div>
       </div>
@@ -994,31 +1075,31 @@
         </div>
       </div>
       <div class="portfolio-card reveal reveal-delay-2">
-        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80" alt="Modern Kitchen" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80" alt="Engineering project" loading="lazy" />
         <div class="portfolio-overlay">
-          <div class="portfolio-tag">Interior Decor</div>
-          <div class="portfolio-title">Ikoyi Modern Kitchen</div>
+          <div class="portfolio-tag">Engineering</div>
+          <div class="portfolio-title">Apapa Industrial Facility</div>
         </div>
       </div>
       <div class="portfolio-card reveal reveal-delay-1">
-        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80" alt="Living Room" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80" alt="Agricultural development" loading="lazy" />
         <div class="portfolio-overlay">
-          <div class="portfolio-tag">Building Furnishing</div>
-          <div class="portfolio-title">Abuja Executive Suite</div>
+          <div class="portfolio-tag">Agricultural Services</div>
+          <div class="portfolio-title">Ogun Farm Infrastructure</div>
         </div>
       </div>
       <div class="portfolio-card reveal reveal-delay-2">
         <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Modern Villa" loading="lazy" />
         <div class="portfolio-overlay">
-          <div class="portfolio-tag">Civil Engineering</div>
+          <div class="portfolio-tag">Construction</div>
           <div class="portfolio-title">Banana Island Villa</div>
         </div>
       </div>
       <div class="portfolio-card reveal reveal-delay-3">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Office Space" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80" alt="Office Interior" loading="lazy" />
         <div class="portfolio-overlay">
           <div class="portfolio-tag">Interior Decor</div>
-          <div class="portfolio-title">Lagos Corporate HQ</div>
+          <div class="portfolio-title">Ikoyi Corporate Office</div>
         </div>
       </div>
     </div>
@@ -1065,8 +1146,8 @@
   <div class="parallax-section">
     <div class="parallax-bg"></div>
     <div class="parallax-content">
-      <h2 class="section-title reveal">Ready to <span>Build</span> Something Great?</h2>
-      <p class="reveal reveal-delay-1">Let's turn your vision into a landmark. Our team is ready to bring your project to life.</p>
+      <h2 class="section-title reveal">Build. Grow.<br /><span>Deliver.</span></h2>
+      <p class="reveal reveal-delay-1">Whether it's a construction project, an engineering contract, an interior transformation, a farm development, or a logistics challenge — our team is ready.</p>
       <a href="#contact" class="btn-primary reveal reveal-delay-2">Start Your Project Today</a>
     </div>
   </div>
@@ -1107,25 +1188,25 @@
         <div class="testimonial-slide">
           <div class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"The Buumaykoncept team handled our Abuja villa project from ground-breaking to final handover. Their logistics team ensured materials arrived on time, and the construction quality exceeded our expectations. I would recommend them without hesitation."</p>
+            <p class="testimonial-text">"Buumaykoncept developed the irrigation and storage infrastructure for our 200-hectare farm in Ogun State. Their agricultural team understood our operational needs, their engineers delivered a robust facility, and their logistics arm sourced every material on time. An exceptional multi-service partner."</p>
             <div class="testimonial-author">
-              <div class="author-avatar">FK</div>
+              <div class="author-avatar">TA</div>
               <div>
-                <div class="author-name">Fatima Kabir</div>
-                <div class="author-role">Property Developer, Abuja</div>
+                <div class="author-name">Taiwo Adeyemi</div>
+                <div class="author-role">Director, GreenField Agro Nigeria</div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="slider-controls">
-        <button class="slider-btn" id="prev-btn" aria-label="Previous">&#8592;</button>
+        <button type="button" class="slider-btn" id="prev-btn" aria-label="Previous">&#8592;</button>
         <div class="slider-dots">
           <div class="slider-dot active" data-index="0"></div>
           <div class="slider-dot" data-index="1"></div>
           <div class="slider-dot" data-index="2"></div>
         </div>
-        <button class="slider-btn" id="next-btn" aria-label="Next">&#8594;</button>
+        <button type="button" class="slider-btn" id="next-btn" aria-label="Next">&#8594;</button>
       </div>
     </div>
   </section>
@@ -1211,9 +1292,10 @@
             <label for="service">Service Interested In</label>
             <select id="service" name="service">
               <option value="">Select a service…</option>
-              <option>Civil Engineering</option>
+              <option>Construction</option>
               <option>Interior Decor</option>
-              <option>Building Furnishing</option>
+              <option>Engineering</option>
+              <option>Agricultural Services</option>
               <option>Logistics</option>
               <option>Full Project Management</option>
             </select>
@@ -1235,15 +1317,19 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="logo.png" alt="Buumaykoncept" />
-        <p>Nigeria's premier design and construction studio. Building dreams into reality since 2012.</p>
+        <a href="#home" class="footer-brand-logo">
+          <div class="footer-brand-icon"><img src="favicon.png" alt="Buumaykoncept" /></div>
+          <span class="footer-brand-name">Buumay<span>koncept</span></span>
+        </a>
+        <p>Nigeria's premier construction, engineering, and agricultural services company. Building, growing, and delivering since 2012.</p>
       </div>
       <div>
         <div class="footer-col-title">Services</div>
         <ul class="footer-links">
-          <li><a href="#services">Civil Engineering</a></li>
+          <li><a href="#services">Construction</a></li>
           <li><a href="#services">Interior Decor</a></li>
-          <li><a href="#services">Building Furnishing</a></li>
+          <li><a href="#services">Engineering</a></li>
+          <li><a href="#services">Agricultural Services</a></li>
           <li><a href="#services">Logistics</a></li>
         </ul>
       </div>
