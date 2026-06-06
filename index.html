@@ -46,15 +46,16 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --brand-orange: #E8870A;
-      --brand-amber: #F5A623;
-      --bg-0: #050505;
-      --bg-1: #0A0A0A;
-      --bg-2: #0F0F0F;
-      --bg-3: #141414;
-      --text-primary: #F0EDE8;
-      --text-muted: #888;
-      --border: rgba(232,135,10,0.18);
+      /* Buumaykoncept — Gray & Gold palette (from company profile) */
+      --brand-orange: #CEA244;   /* primary gold */
+      --brand-amber: #E3BE63;    /* light gold — hovers */
+      --bg-0: #0E0E0C;
+      --bg-1: #141412;
+      --bg-2: #1A1A17;
+      --bg-3: #222220;
+      --text-primary: #F2F1EC;
+      --text-muted: #8C8C86;
+      --border: rgba(206,162,68,0.18);
       --radius: 12px;
       --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
     }
@@ -86,7 +87,7 @@
     }
     #cursor-ring {
       width: 36px; height: 36px;
-      border: 2px solid rgba(232,135,10,0.55);
+      border: 2px solid rgba(206,162,68,0.55);
       transition: width 0.25s, height 0.25s, border-color 0.25s;
     }
     body:hover #cursor-dot, body:hover #cursor-ring { opacity: 1; }
@@ -251,7 +252,7 @@
     .btn-primary:hover {
       background: var(--brand-amber);
       transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(232,135,10,0.35);
+      box-shadow: 0 8px 32px rgba(206,162,68,0.35);
     }
     .btn-outline {
       font-family: 'Space Grotesk', sans-serif;
@@ -307,7 +308,7 @@
     .mosaic-cell:first-child { grid-row: span 2; }
     .mosaic-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(232,135,10,0.12) 0%, transparent 60%);
+      background: linear-gradient(135deg, rgba(206,162,68,0.12) 0%, transparent 60%);
       border-radius: var(--radius);
       pointer-events: none;
     }
@@ -393,7 +394,7 @@
     }
     .service-num {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 4rem; color: rgba(232,135,10,0.07);
+      font-size: 4rem; color: rgba(206,162,68,0.07);
       position: absolute; top: 1rem; right: 1.5rem;
       line-height: 1; pointer-events: none;
     }
@@ -459,8 +460,8 @@
     #process { background: var(--bg-1); }
     .process-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.2rem;
       counter-reset: step;
     }
     .process-card {
@@ -479,11 +480,11 @@
     .process-num {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 5rem; line-height: 1;
-      color: rgba(232,135,10,0.08);
+      color: rgba(206,162,68,0.08);
       position: absolute; top: 0.5rem; right: 1rem;
       transition: color var(--transition);
     }
-    .process-card:hover .process-num { color: rgba(232,135,10,0.18); }
+    .process-card:hover .process-num { color: rgba(206,162,68,0.18); }
     .process-step-label {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 0.68rem; font-weight: 500;
@@ -551,7 +552,7 @@
       content: '\201C';
       font-family: 'Bebas Neue', sans-serif;
       font-size: 8rem; line-height: 0.7;
-      color: rgba(232,135,10,0.12);
+      color: rgba(206,162,68,0.12);
       position: absolute; top: 1.5rem; left: 2rem;
       pointer-events: none;
     }
@@ -607,35 +608,6 @@
     }
     .slider-dot.active { background: var(--brand-orange); transform: scale(1.3); }
 
-    /* ── CLIENTS STRIP ── */
-    #clients { background: var(--bg-1); padding: 60px 5vw; }
-    .clients-label {
-      text-align: center;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.72rem; font-weight: 500;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 2.5rem;
-    }
-    .clients-marquee { overflow: hidden; }
-    .clients-track {
-      display: inline-flex; gap: 4rem; align-items: center;
-      animation: marquee 28s linear infinite;
-      white-space: nowrap;
-    }
-    .client-logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.9rem; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: rgba(240,237,232,0.25);
-      transition: color var(--transition);
-      padding: 0.5rem 1.2rem;
-      border: 1px solid rgba(240,237,232,0.08);
-      border-radius: 4px;
-      white-space: nowrap;
-    }
-    .client-logo:hover { color: var(--brand-orange); border-color: var(--brand-orange); }
-
     /* ── CONTACT ── */
     #contact { background: var(--bg-0); }
     .contact-grid {
@@ -651,7 +623,7 @@
     }
     .contact-icon {
       width: 40px; height: 40px; border-radius: 8px;
-      background: rgba(232,135,10,0.1);
+      background: rgba(206,162,68,0.1);
       border: 1px solid var(--border);
       display: flex; align-items: center; justify-content: center;
       font-size: 1rem; flex-shrink: 0;
@@ -664,6 +636,8 @@
       color: var(--text-muted); margin-bottom: 0.2rem;
     }
     .contact-detail-value { font-size: 0.95rem; color: var(--text-primary); }
+    a.contact-link { text-decoration: none; display: inline-block; transition: color var(--transition); }
+    a.contact-link:hover { color: var(--brand-orange); }
     .contact-form {
       background: var(--bg-2);
       border: 1px solid var(--border);
@@ -696,7 +670,7 @@
     .form-group textarea:focus,
     .form-group select:focus {
       border-color: var(--brand-orange);
-      box-shadow: 0 0 0 3px rgba(232,135,10,0.12);
+      box-shadow: 0 0 0 3px rgba(206,162,68,0.12);
     }
     .form-group textarea { resize: vertical; min-height: 130px; }
     .form-group select option { background: var(--bg-3); }
@@ -716,7 +690,7 @@
     .form-submit:hover {
       background: var(--brand-amber);
       transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(232,135,10,0.3);
+      box-shadow: 0 8px 28px rgba(206,162,68,0.3);
     }
     .form-success {
       display: none;
@@ -790,7 +764,7 @@
       text-decoration: none;
       transition: border-color var(--transition), color var(--transition), background var(--transition);
     }
-    .social-link:hover { border-color: var(--brand-orange); color: var(--brand-orange); background: rgba(232,135,10,0.08); }
+    .social-link:hover { border-color: var(--brand-orange); color: var(--brand-orange); background: rgba(206,162,68,0.08); }
 
     /* ── SCROLL REVEAL ── */
     .reveal {
@@ -1070,8 +1044,8 @@
       <div class="portfolio-card reveal reveal-delay-1">
         <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Luxury Interior" loading="lazy" />
         <div class="portfolio-overlay">
-          <div class="portfolio-tag">Interior Decor</div>
-          <div class="portfolio-title">Victoria Island Penthouse</div>
+          <div class="portfolio-tag">Interior Design</div>
+          <div class="portfolio-title">Old GRA Penthouse</div>
         </div>
       </div>
       <div class="portfolio-card reveal reveal-delay-2">
@@ -1109,35 +1083,42 @@
   <section id="process">
     <p class="section-label reveal">How We Work</p>
     <h2 class="section-title reveal reveal-delay-1">Our <span>Process</span></h2>
-    <p class="section-sub reveal reveal-delay-2">A streamlined four-step approach that keeps your project on time, on budget, and beyond expectations.</p>
+    <p class="section-sub reveal reveal-delay-2">A streamlined five-stage approach — built on collaboration, creativity, and precision — that keeps your project on time, on budget, and beyond expectations.</p>
     <div class="process-grid">
       <div class="process-card reveal">
         <div class="process-num">01</div>
         <div class="process-step-label">Step One</div>
         <span class="process-icon">💬</span>
-        <div class="process-title">Consult</div>
-        <p class="process-desc">We begin with a deep-dive consultation to understand your vision, requirements, timeline, and budget constraints.</p>
+        <div class="process-title">Consultation</div>
+        <p class="process-desc">We begin by understanding your vision, needs, and lifestyle — ensuring every concept is tailored, purposeful, and grounded in how you'll use the space.</p>
       </div>
       <div class="process-card reveal reveal-delay-1">
         <div class="process-num">02</div>
         <div class="process-step-label">Step Two</div>
-        <span class="process-icon">✏️</span>
-        <div class="process-title">Design</div>
-        <p class="process-desc">Our designers and engineers craft detailed plans, 3D renders, and material specifications for your approval.</p>
+        <span class="process-icon">💡</span>
+        <div class="process-title">Concept</div>
+        <p class="process-desc">Ideas take shape. We translate your brief into a guiding concept that balances structural integrity with modern aesthetics.</p>
       </div>
       <div class="process-card reveal reveal-delay-2">
         <div class="process-num">03</div>
         <div class="process-step-label">Step Three</div>
-        <span class="process-icon">🔨</span>
-        <div class="process-title">Build</div>
-        <p class="process-desc">Skilled craftsmen and engineers execute the plan with precision, with regular progress updates throughout.</p>
+        <span class="process-icon">✏️</span>
+        <div class="process-title">Design</div>
+        <p class="process-desc">Our designers and engineers develop detailed plans, layouts, and material specifications — refining every detail for your approval.</p>
       </div>
       <div class="process-card reveal reveal-delay-3">
         <div class="process-num">04</div>
         <div class="process-step-label">Step Four</div>
-        <span class="process-icon">🎯</span>
-        <div class="process-title">Deliver</div>
-        <p class="process-desc">We hand over a fully completed, inspected project — on schedule — with post-delivery support included.</p>
+        <span class="process-icon">🔨</span>
+        <div class="process-title">Execution</div>
+        <p class="process-desc">Skilled craftsmen and engineers bring the design to life with precision, handling every stage with attention to detail and quality.</p>
+      </div>
+      <div class="process-card reveal reveal-delay-4">
+        <div class="process-num">05</div>
+        <div class="process-step-label">Step Five</div>
+        <span class="process-icon">✨</span>
+        <div class="process-title">Final Styling</div>
+        <p class="process-desc">The finishing touches — styling, furnishing, and detailing that transform a completed build into a refined, move-in-ready space.</p>
       </div>
     </div>
   </section>
@@ -1162,12 +1143,12 @@
         <div class="testimonial-slide">
           <div class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"Buumaykoncept completely transformed our Lekki home. The attention to detail in the interior design was extraordinary — every corner reflects exactly what we envisioned. The team was professional, punctual, and genuinely passionate about the work."</p>
+            <p class="testimonial-text">"Buumaykoncept completely transformed our GRA home. The attention to detail in the interior design was extraordinary — every corner reflects exactly what we envisioned. The team was professional, punctual, and genuinely passionate about the work."</p>
             <div class="testimonial-author">
               <div class="author-avatar">AO</div>
               <div>
                 <div class="author-name">Adaeze Okonkwo</div>
-                <div class="author-role">Homeowner, Lekki Phase 1</div>
+                <div class="author-role">Homeowner, GRA Phase 2</div>
               </div>
             </div>
           </div>
@@ -1175,7 +1156,7 @@
         <div class="testimonial-slide">
           <div class="testimonial-card">
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"We contracted Buumaykoncept for our new corporate headquarters in Victoria Island. From the structural work to the final furnishing, every phase was handled with exceptional competence. They delivered on time and within budget — a rare feat in this industry."</p>
+            <p class="testimonial-text">"We contracted Buumaykoncept for our new corporate headquarters in Old GRA, Port Harcourt. From the structural work to the final furnishing, every phase was handled with exceptional competence. They delivered on time and within budget — a rare feat in this industry."</p>
             <div class="testimonial-author">
               <div class="author-avatar">EI</div>
               <div>
@@ -1247,21 +1228,21 @@
           <div class="contact-icon">📍</div>
           <div>
             <div class="contact-detail-label">Office</div>
-            <div class="contact-detail-value">14 Admiralty Way, Lekki Phase 1, Lagos, Nigeria</div>
+            <a href="https://share.google/OkRzljuKuoq1toBYO" target="_blank" rel="noopener" class="contact-detail-value contact-link">Woji Road, GRA Phase 2, Port Harcourt, Nigeria</a>
           </div>
         </div>
         <div class="contact-detail">
           <div class="contact-icon">📞</div>
           <div>
             <div class="contact-detail-label">Phone</div>
-            <div class="contact-detail-value">+234 801 234 5678</div>
+            <a href="tel:+2348167731625" class="contact-detail-value contact-link">+234 816 773 1625</a>
           </div>
         </div>
         <div class="contact-detail">
           <div class="contact-icon">✉️</div>
           <div>
             <div class="contact-detail-label">Email</div>
-            <div class="contact-detail-value">hello@buumaykoncept.com</div>
+            <a href="mailto:Admin@buumaykoncept.com" class="contact-detail-value contact-link">Admin@buumaykoncept.com</a>
           </div>
         </div>
         <div class="contact-detail">
@@ -1345,19 +1326,19 @@
       <div>
         <div class="footer-col-title">Connect</div>
         <ul class="footer-links">
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">Twitter / X</a></li>
-          <li><a href="#">WhatsApp</a></li>
+          <li><a href="https://instagram.com/buumaykoncept" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://wa.me/2348167731625" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:Admin@buumaykoncept.com">Email Us</a></li>
+          <li><a href="https://share.google/OkRzljuKuoq1toBYO" target="_blank" rel="noopener">Find Us</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2025 <span>Buumaykoncept</span>. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 <span>Buumaykoncept</span>. All rights reserved.</p>
       <div class="social-links">
-        <a href="#" class="social-link" aria-label="Instagram">IG</a>
-        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+        <a href="https://instagram.com/buumaykoncept" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">IG</a>
+        <a href="https://wa.me/2348167731625" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">WA</a>
+        <a href="mailto:Admin@buumaykoncept.com" class="social-link" aria-label="Email">@</a>
       </div>
     </div>
   </footer>
@@ -1378,11 +1359,11 @@
     document.querySelectorAll('a, button, .portfolio-card, .service-card, .process-card').forEach(el => {
       el.addEventListener('mouseenter', () => {
         ring.style.width = '56px'; ring.style.height = '56px';
-        ring.style.borderColor = 'rgba(232,135,10,0.9)';
+        ring.style.borderColor = 'rgba(206,162,68,0.9)';
       });
       el.addEventListener('mouseleave', () => {
         ring.style.width = '36px'; ring.style.height = '36px';
-        ring.style.borderColor = 'rgba(232,135,10,0.55)';
+        ring.style.borderColor = 'rgba(206,162,68,0.55)';
       });
     });
 
@@ -1437,7 +1418,7 @@
           this.vx = rand(-0.3, 0.3);
           this.vy = rand(-0.5, -0.1);
           this.alpha = rand(0.1, 0.55);
-          this.color = Math.random() > 0.6 ? '#E8870A' : '#F5A623';
+          this.color = Math.random() > 0.6 ? '#CEA244' : '#E3BE63';
         }
         update() {
           this.x += this.vx; this.y += this.vy;
@@ -1468,7 +1449,7 @@
             if (dist < 100) {
               ctx.save();
               ctx.globalAlpha = (1 - dist/100) * 0.08;
-              ctx.strokeStyle = '#E8870A';
+              ctx.strokeStyle = '#CEA244';
               ctx.lineWidth = 0.5;
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
@@ -1518,7 +1499,7 @@
       required.forEach(field => {
         if (!field.value.trim()) {
           valid = false;
-          field.style.borderColor = '#e84a0a';
+          field.style.borderColor = '#CF4B3E';
           setTimeout(() => field.style.borderColor = '', 2000);
         }
       });
